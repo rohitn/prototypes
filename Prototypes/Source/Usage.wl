@@ -17,6 +17,7 @@ CreateGIFAnimation::usage = "CreateGIFAnimation[name,list] creates a GIF from 'l
 UnmatchQ::usage = "UnmatchQ[expr,form] is the same as Not[MatchQ[expr,form]]";
 (* general language *)
 By::usage = "By[head, data, func] evaluates as head[Map[func,data]]";
+Deconstruct::usage = "Deconstruct[expr] returns the head and arguments of 'expr' as a list; Equivalent to Level[expr,{-1},Heads->True]";
 (* statistics *)
 MeanBy::usage = "MeanBy[data, func] computes the mean of 'data' by using 'func'";
 StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the standard deviation of 'data' by using 'func'";
@@ -127,3 +128,22 @@ StringUnion::usage = "StringUnion[s1,s2] gives the string of characters in eithe
 StringDisjointQ::usage = "StringDisjointQ[s1,s2] gives True if 's1' and 's2' have no characters in common and False otherwise";
 StringIntersectingQ::usage = "StringIntersectingQ[s1,s2] gives True if 's1' and 's2' have characters in common and False otherwise";
 StringSort::usage = "StringSort[s1] gives a sorted string of the characters in 's1'";
+
+(* random *)
+RandomWikipediaData::usage = "RandomWikipediaData[] gives a randomly selected Wikipedia article";
+RandomRomanNumeral::usage = "RandomRomanNumeral[...] gives a random Roman numeral, using the same usage as RandomInteger";
+RandomDelete::usage = "RandomDelete[expr,pattern] randomly deletes positions of 'expr' which match 'pattern'";
+RandomPosition::usage = "RandomPosition[expr,pattern] gives a randomly selected position of 'expr' which matches 'pattern'";
+
+(* Service *)
+What3Words::usage = "What3Words[location] and What3Words[words] use the What3Words service to turn words into geographical locations and vice versa";
+OpenSky::usage = "OpenSky[location,range] gives a map of airplanes within 'range' of 'location'";
+(* Crypto *)
+$HashTypes::usage = "$HashTypes gives the list of supported hash types";
+
+(* Primes *)
+PrimeCount::usage = "PrimeCount[n] gives the number of primes less than or equal to 'n'. Uses binaries from: https://github.com/kimwalisch/primecount";
+PrimeSum::usage = "PrimeSum[n] gives the sum of primes less than or equal to 'n'. Uses binaries from: https://github.com/kimwalisch/primesum";
+
+(* words *)
+$EnglishWords::usage = "$EnglishWords is a list of over 450,000 words found in the English language. Uses data from: https://github.com/dwyl/english-words";
